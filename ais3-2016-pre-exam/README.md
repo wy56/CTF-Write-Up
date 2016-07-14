@@ -112,14 +112,14 @@ Hint: XOR
 
 但上傳 key 的時候，發現不正確... ((崩潰 
 
-後來發現有個英文單字不正確，修改後，得到了通關的 key
+後來發現有個英文單字拼錯，修改後，得到了通關的 key
 
 The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 
 
 ## crypto-2
 
-這是題目給的 Code
+Source Code
 
 ``` php
 <?php
@@ -151,8 +151,21 @@ The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 ?>
 ```
 
+這篇參考了 PCC 的 [Writeup](https://github.com/pcchou/ctf-writeups/blob/master/2016/tw-edu-ctf/LEA/README.md") 
 
+得知此題是 `length extension attack` 解決
 
+Payload 1
+```
+https://quiz.ais3.org:8014/?expire=1467343030%80%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%01h&expire=2467343030&auth=b3afa04f67bff2c22754d4313a91b82cf2ad0eb0
+```
+Padload 2
+```
+https://quiz.ais3.org:8014/?expire=1467346517&auth=5c85f041d3de578d2acca06a90cf83633129e24e
+&expire=12467346517
+```
+
+The key is `ais3{HasH.eXtension.@tt@ck!}`
 
 ## web-1
 
