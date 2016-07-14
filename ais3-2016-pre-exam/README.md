@@ -57,6 +57,29 @@ The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 
 ## web-1
 
+打開 [web1](https://quiz.ais3.org:8011) 看到以下內容
+
+```
+There is a secret page in these website. Even Google can not find it, can you?
+```
+
+推測是 `robots.txt`，得到了以下資訊
+
+```
+User-agent: *
+Disallow: /admin
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /this_secret_page_you_should_not_know_where_it_is.php
+```
+
+開啟 `https://quiz.ais3.org:8011/this_secret_page_you_should_not_know_where_it_is.php`
+
+
+The key is `ais3{Y0u_beat_the_G00g1e!!}`
+
 
 ## web-2
 
