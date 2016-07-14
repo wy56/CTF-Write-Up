@@ -1,6 +1,7 @@
 ## misc-1
 
 Open the misc1.txt
+ 
 
 The key is `ais3{2016_^_^_hello_world!}`
 
@@ -32,7 +33,7 @@ client.write(str.encode(str(len(data))) + '\n' + data)
 print(client.read_all())
 ```
 
-
+ 
 The key is `ais3{First t1me 1$sc4pe tHE S4nd80x}`
 
 ## crypto-1
