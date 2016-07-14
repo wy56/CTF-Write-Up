@@ -32,6 +32,7 @@ client.write(str.encode(str(len(data))) + '\n' + data)
 print(client.read_all())
 ```
 
+
 The key is `ais3{First t1me 1$sc4pe tHE S4nd80x}`
 
 ## crypto-1
@@ -48,6 +49,7 @@ Hint: XOR
 但上傳 key 的時候，發現不正確... ((崩潰 
 
 經過了多次修改，得到了最後的 key
+
 
 The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 
@@ -76,6 +78,7 @@ Disallow: /this_secret_page_you_should_not_know_where_it_is.php
 ```
 
 開啟 [`https://quiz.ais3.org:8011/this_secret_page_you_should_not_know_where_it_is.php`](https://quiz.ais3.org:8011/this_secret_page_you_should_not_know_where_it_is.php)
+
 
 
 The key is `ais3{Y0u_beat_the_G00g1e!!}`
@@ -121,10 +124,11 @@ WeiYu$ curl https://quiz.ais3.org:8012/
     <title>Admin Panel</title>
 </head>
 <body>
-Admin's secret is: {admin's_pane1_is_on_fir3!!!!!}</body>
+Admin's secret is: ais3{admin's_pane1_is_on_fir3!!!!!}</body>
 </body>
 </html>
 ```
+
 
 The key is `ais3{admin's_pane1_is_on_fir3!!!!!}`
 
