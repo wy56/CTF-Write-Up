@@ -153,11 +153,12 @@ Source Code
 
 這篇參考了 PCC 的 [Writeup](https://github.com/pcchou/ctf-writeups/blob/master/2016/tw-edu-ctf/LEA/README.md") 
 
-得知此題是 `length extension attack` 解決
+得知此題是 `length extension attack` 處理
 
 Payload 1
 ```
-https://quiz.ais3.org:8014/?expire=1467343030%80%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%01h&expire=2467343030&auth=b3afa04f67bff2c22754d4313a91b82cf2ad0eb0
+https://quiz.ais3.org:8014/?expire=1467343030%80%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%01h
+&expire=2467343030&auth=b3afa04f67bff2c22754d4313a91b82cf2ad0eb0
 ```
 Padload 2
 ```
@@ -244,5 +245,9 @@ The key is `ais3{admin's_pane1_is_on_fir3!!!!!}`
 ## web-3
 
 開啟 [web3](https://quiz.ais3.org:8013/)
+
+可以自己架起來玩 [PHP](web3/)
+
+
 
 
