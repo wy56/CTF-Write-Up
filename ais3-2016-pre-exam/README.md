@@ -21,7 +21,9 @@ Hint: symbolic link (透過 tar 可保留 synblic link)
 
 Here is the misc3_sol.py code 
 
-```
+``` python
+#!/usr/bin/env python3
+
 import telnetlib
 
 data = str.encode(list(open('guess.tar'))[0])
@@ -45,7 +47,9 @@ Hint: XOR
 
 但上傳 key 的時候，發現不正確... ((崩潰 
 
-於是嘗試修改了 key 變成 `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
+經過了多次修改，得到了最後的 key
+
+The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 
 
 ## crypto-2
