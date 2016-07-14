@@ -8,7 +8,7 @@ The key is `ais3{2016_^_^_hello_world!}`
 
 Hint: 7Zip
 
-此題會給一個沒副檔名又壞掉的 [File](/misc2/UNPACK_ME)
+此題會給一個沒副檔名又壞掉的 [File](misc2/UNPACK_ME)
 
 透過 [Hex Editor](http://www.azofreeware.com/2014/04/hxd-1770-hex.html) 可以發現它的 header 是一個 7z 壓縮檔
 
@@ -24,13 +24,15 @@ Hint: 7Zip
 
 ![misc2/img_misc2_3.png](misc2/img_misc2_3.png)
 
-成功解壓後，又獲得壞掉的壓縮檔，依照以上的修復方式，再次解壓縮後可以得到放密碼的`secret.txt`，另一個是壞掉的壓縮檔
+成功解壓後，又獲得壞掉的壓縮檔，依照以上的修復方式，
+
+再次解壓縮後可以得到放密碼的`secret.txt`，另一個是壞掉的壓縮檔
 
 ![misc2/img_misc2_4.png](misc2/img_misc2_4.png)
 
 重複做了好幾次發現，這個壓縮檔可能包了好幾層...
 
-於是，執行以下程式
+執行以下程式，最後得到 `flag.txt`
 
 `WeiYu$ python misc2_sol.py` 
 
@@ -69,8 +71,6 @@ while True:
         pass
 ```
 
-最後解出 `flag.txt`
-
 The key is `ais3{7zzZzzzZzzZzZzzZiP}`
 
 
@@ -78,11 +78,11 @@ The key is `ais3{7zzZzzzZzzZzZzzZiP}`
 
 Hint: symbolic link (透過 tar 可保留 synblic link)
 
-`ln -s ../flag.txt guess.txt`
+`WeiYu$ ln -s ../flag.txt guess.txt`
 
-`tar cvf guess.tar guess.txt`
+`WeiYu$ tar cvf guess.tar guess.txt`
 
-`python misc3_sol.py`
+`WeiYu$ python misc3_sol.py`
 
 Here is the misc3_sol.py code 
 
@@ -118,6 +118,40 @@ The key is `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
 
 
 ## crypto-2
+
+這是題目給的 Code
+
+``` php
+<?php
+    $path = "..";
+    $file = "flag.txt";
+    $authenticated = false;
+    $secret = trim(file_get_contents("$path/$file"));
+    assert(strlen($secret) <= 60);
+
+    if(isset($_GET['expire']) && isset($_GET['auth'])) {
+        $expire = $_GET['expire'];
+        $auth = $_GET['auth'];
+        $qstr = substr(strstr($_SERVER['REQUEST_URI'], '?'), 1);
+        $qstr = preg_replace('/&auth=.*/', '', $qstr);
+        $qstr = urldecode($qstr);
+        if(sha1($secret . "$qstr") === $auth) {
+            if($expire > time(0)) {
+                $authenticated = true;
+            }
+        }
+    } else {
+        $expire = time(0) - 1000000;
+        $auth = sha1($secret . "expire=$expire");
+        $uri = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
+        header("HTTP/1.1 302 Found");
+        header("Location: $uri?expire=$expire&auth=$auth");
+        die;
+    }
+?>
+```
+
+
 
 
 ## web-1
