@@ -213,8 +213,8 @@ header("Location: you_should_not_pass");
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Admin Panel</title>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
 </head>
 <body>
 Admin's secret is: <?php echo $flag; ?>
