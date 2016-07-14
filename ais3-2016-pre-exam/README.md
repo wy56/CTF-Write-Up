@@ -12,21 +12,21 @@ Hint: 7Zip
 
 透過 [Hex Editor](http://www.azofreeware.com/2014/04/hxd-1770-hex.html) 可以發現它的 header 是一個 7z 壓縮檔
 
-[/misc2/img_misc2_1.png](/misc2/img_misc2_1.png)
+[/misc2/img_misc2_1.png](misc2/img_misc2_1.png)
 
 透過 [7Zip](http://www.7-zip.org/recover.html) 官方的說明，可以知道真正的 7z header 是 7z 不是 7Z
 
-[/misc2/img_misc2_2.png](/misc2/img_misc2_2.png)
+[/misc2/img_misc2_2.png](misc2/img_misc2_2.png)
 
 修復好並解壓縮後，會發現需要密碼，
 
 接著可以猜密碼可能是 `UDJRRDVRJyfbWBxEMLEX`
 
-[/misc2/img_misc2_3.png](/misc2/img_misc2_3.png)
+[/misc2/img_misc2_3.png](misc2/img_misc2_3.png)
 
 成功解壓後，又獲得壞掉的壓縮檔，依照以上的修復方式，再次解壓縮後可以得到放密碼的`secret.txt`，另一個是壞掉的壓縮檔
 
-[/misc2/img_misc2_4.png](/misc2/img_misc2_4.png)
+[/misc2/img_misc2_4.png](misc2/img_misc2_4.png)
 
 重複做了好幾次發現，這個壓縮檔可能包了好幾層...
 
