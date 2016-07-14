@@ -38,7 +38,15 @@ Hint: XOR
 
 可以透過 [pwntool](https://github.com/hellman/xortool) 破解此題
 
+以下為執行畫面
 ![crypto1/xortool_sol.png](crypto1/xortool_sol.png)
+
+得到了 `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_i!ea}`
+
+但上傳 key 的時候，發現不正確... ((崩潰 
+
+於是嘗試修改了 key 變成 `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_idea}`
+
 
 ## crypto-2
 
