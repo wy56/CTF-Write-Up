@@ -38,7 +38,7 @@ Hint: XOR
 
 可以透過 [pwntool](https://github.com/hellman/xortool) 破解此題
 
-`
+![crypto1/xortool_sol.png](crypto1/xortool_sol.png)
 
 ## crypto-2
 
