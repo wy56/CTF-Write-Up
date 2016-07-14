@@ -36,7 +36,9 @@ The key is `ais3{First t1me 1$sc4pe tHE S4nd80x}`
 
 Hint: XOR
 
-可以透過 pwntool 破解此題
+可以透過 [pwntool](https://github.com/hellman/xortool] 破解此題
+
+`
 
 ## crypto-2
 
