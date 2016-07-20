@@ -8,7 +8,7 @@ The key is `ais3{2016_^_^_hello_world!}`
 
 Hint: 7Zip
 
-此題會給一個沒副檔名又壞掉的 [file](misc2/UNPACK_ME)
+此題會給一個沒副檔名又壞掉的 [FILE](misc2/UNPACK_ME)
 
 透過 [Hex Editor](http://www.azofreeware.com/2014/04/hxd-1770-hex.html) 可以發現它的 header 是一個 7z 壓縮檔
 
