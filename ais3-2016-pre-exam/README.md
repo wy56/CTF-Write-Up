@@ -1,6 +1,6 @@
 ## misc-1
 
-Open the `misc1.txt`
+Open the `[misc1.txt](misc1/misc1.txt)`
 
 The key is `ais3{2016_^_^_hello_world!}`
 
@@ -8,13 +8,13 @@ The key is `ais3{2016_^_^_hello_world!}`
 
 Hint: 7Zip
 
-此題會給一個沒副檔名又壞掉的 [File](misc2/UNPACK_ME)
+此題會給一個沒副檔名又壞掉的 [file](misc2/UNPACK_ME)
 
 透過 [Hex Editor](http://www.azofreeware.com/2014/04/hxd-1770-hex.html) 可以發現它的 header 是一個 7z 壓縮檔
 
 ![misc2/img_misc2_1.png](misc2/img_misc2_1.png)
 
-透過 [7Zip](http://www.7-zip.org/recover.html) 官方的說明，可以知道真正的 7z header 是 7z 不是 7Z
+從 [7Zip](http://www.7-zip.org/recover.html) 官方的說明，可以知道真正的 7z header 是 7z 不是 7Z
 
 ![misc2/img_misc2_2.png](misc2/img_misc2_2.png)
 
@@ -34,7 +34,7 @@ Hint: 7Zip
 
 執行以下程式，最後得到 `flag.txt`
 
-`WeiYu$ python misc2_sol.py` 
+`WeiYu$ python misc2_sol.py`
 
 Here is the misc2_sol.py code
 
@@ -76,7 +76,7 @@ The key is `ais3{7zzZzzzZzzZzZzzZiP}`
 
 ## misc-3
 
-Hint: symbolic link (透過 tar 可保留 synblic link)
+Hint: symbolic link (透過 tar 可保留 symbolic link)
 
 `WeiYu$ ln -s ../flag.txt guess.txt`
 
@@ -84,7 +84,7 @@ Hint: symbolic link (透過 tar 可保留 synblic link)
 
 `WeiYu$ python misc3_sol.py`
 
-Here is the misc3_sol.py code 
+Here is the misc3_sol.py code
 
 ``` python
 #!/usr/bin/env python3
@@ -96,7 +96,7 @@ client = telnetlib.Telnet('quiz.ais3.org', 9150)
 client.write(str.encode(str(len(data))) + '\n' + data)
 print(client.read_all())
 ```
- 
+
 The key is `ais3{First t1me 1$sc4pe tHE S4nd80x}`
 
 ## crypto-1
@@ -110,7 +110,7 @@ Hint: XOR
 
 得到了 `ais3{XoR_enCrYPti0N_15_n0t_a_G00d_i!ea}`
 
-但上傳 key 的時候，發現不正確... ((崩潰 
+但上傳 key 的時候，發現不正確... ((崩潰
 
 後來發現有個英文單字拼錯，修改後，得到了通關的 key
 
@@ -151,7 +151,7 @@ Source Code
 ?>
 ```
 
-這篇參考了 PCC 的 [Writeup](https://github.com/pcchou/ctf-writeups/blob/master/2016/tw-edu-ctf/LEA/README.md") 
+這篇參考了 PCC 的 [writeup](https://github.com/pcchou/ctf-writeups/blob/master/2016/tw-edu-ctf/LEA/README.md")
 
 得知此題是 `length extension attack` 處理
 
@@ -160,7 +160,7 @@ Payload 1
 https://quiz.ais3.org:8014/?expire=1467343030%80%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%01h
 &expire=2467343030&auth=b3afa04f67bff2c22754d4313a91b82cf2ad0eb0
 ```
-Padload 2
+Payload 2
 ```
 https://quiz.ais3.org:8014/?expire=1467346517&auth=5c85f041d3de578d2acca06a90cf83633129e24e
 &expire=12467346517
@@ -224,7 +224,7 @@ Admin's secret is: <?php echo $flag; ?>
 
 可以看到這段 php 沒有 `exit` 跟 `die`，因此 body content 還是會輸出
 
-```
+``` php
 WeiYu$ curl https://quiz.ais3.org:8012/
 
 <!DOCTYPE html>
@@ -246,8 +246,4 @@ The key is `ais3{admin's_pane1_is_on_fir3!!!!!}`
 
 開啟 [web3](https://quiz.ais3.org:8013/)
 
-可以自己架起來玩 [PHP](web3/)
-
-
-
-
+可以自己架起來玩 [PHP](web3/) 此漏洞在 PHP7 已被修復
