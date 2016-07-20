@@ -1,6 +1,6 @@
 ## misc-1
 
-Open the `[misc1.txt](misc1/misc1.txt)`
+Open the `[misc1.txt]`(misc1/misc1.txt)
 
 The key is `ais3{2016_^_^_hello_world!}`
 
