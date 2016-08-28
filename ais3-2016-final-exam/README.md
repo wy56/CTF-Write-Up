@@ -1,6 +1,6 @@
 # AIS3 2016 Final Exam
 
-Author: WeiYu <zxc41329@gmail.com>
+Author: WeiYu < zxc41329 [at] gmail.com >
 
 Date: 2016.08.28
 
