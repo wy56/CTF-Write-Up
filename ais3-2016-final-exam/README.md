@@ -1,5 +1,17 @@
 # AIS3 2016 Final Exam
 
+Author: WeiYu <zxc41329@gmail.com>
+
+Date: 2016.08.28
+
+## misc-1
+
+Hint: Throw ball to the Pokemon
+
+Open [misc1.txt](misc1/misc1.txt)
+
+
+
 ## 心得
 
 去年參加 AIS3 2015 就對資安產生興趣，
@@ -12,21 +24,19 @@
 
 今年的課程比去年好消化很多，
 
-講師也非常用心把自己的專業傳授給我們，
+講師也非常用心把自己專業知識傳授給我們，
 
-像是 Asuka Nakajima 的投影片做的「逆向工程道館」相當用心，
+印象最深的是 Asuka Nakajima 的投影片「逆向工程道館」看得出相當用心，
 
-讓原本對組語不熟的我，竟然也可以有點 Sense， XD
+讓原本對組語不熟的我，也可以有點 Sense， XD
 
-當然也學到許多工具來做檔案或者 web 分析 [angr](https://github.com/angr)、Burp Suite...etc.
+當然我更會利用工具來做檔案或者 web 分析像是： [angr](https://github.com/angr)、[Burp Suite](https://portswigger.net/burp/)...etc.
 
 這個禮拜收穫很多也結識了很多大大，
 
 希望自己一年比一年更進步，
 
-期許明年有能力解 Bin、Pwn 之類的題目，Cheer Up!!!
+期許明年有能力解 Binary、Pwn 之類的題目，Cheer Up!!!
 
 以下是我今年的 Write-up （如有問題歡迎來信）
-
-## Misc-1 
 
