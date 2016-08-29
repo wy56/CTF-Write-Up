@@ -93,17 +93,19 @@ The flag is `ais{Cl1ent_sId3_check1ng_1s_s0_dangerous!}`
 
 Base64 Decode 後，拿到 [index.php](web3/index.php) 原始碼，
 
+![source_index](web3/img/img_web3_3.png)
+
 之後，試看看用同樣方式看是否能拿到 flag.php 的原始碼，
 
 `https://final.ais3.org:10380/?p=php://filter/convert.base64-encode/resource=flag`
 
 果不其然，這題沒那麼簡單被 waf 濾掉了，又看到了該死的甘道夫，
 
-![source_index](web3/img/img_web3_3.png)
+![source_index](web3/img/img_web3_4.png)
 
 我們再利用 [index.php](web3/index.php) 原始碼獲得了一些線索，
 
-![source_index](web3/img/img_web3_4.png)
+![source_index](web3/img/img_web3_5.png)
 
 查詢到這個 [SQL Injection Bypassing WAF](https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF)
 
@@ -113,11 +115,11 @@ Base64 Decode 後，拿到 [index.php](web3/index.php) 原始碼，
 
 哈哈，拿到原始碼拉～
 
-![source_flag](web3/img/img_web3_5.png)
+![source_flag](web3/img/img_web3_6.png)
 
 打開來看， Flag 果然躺在這裡 Q_Q
 
-![source_flag](web3/img/img_web3_6.png)
+![source_flag](web3/img/img_web3_7.png)
 
 The flag is `ais3{Sn00py_1s_so_cuT3!!!but_there_1s_a_Fxcking_WAF!}`
 
