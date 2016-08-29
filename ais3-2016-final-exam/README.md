@@ -40,6 +40,35 @@ The flag is `ais3{~Black_n_White_vi5ual_crYPtoGraPhY~}`
 
 ## web-1
 
+打開 `https://final.ais3.org:10280`
+
+看到一個管理員的登入介面，
+
+![login](web1/img/img_web1_1.png)
+
+我們觀看原始碼，看到一個可疑的 db.js，
+
+![source_login](web1/img/img_web1_2.png)
+
+點進去後
+
+![sourece_db](web1/img/img_web1_3.png)
+
+可以拿到 sha256 加密過後的 password，
+
+拿去解密得到就可以得到登入密碼，
+
+![password](web1/img/img_web1_4.png)
+
+我們用這組密碼拿去登入，Flag 出現拉～
+
+![web_flag(web1/img/img_web1_5.png)
+
+The flag is `ais{Cl1ent_sId3_check1ng_1s_s0_dangerous!}`
+ 
+
+
+
 ## web-2
 
 ## web-3
