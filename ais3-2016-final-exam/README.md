@@ -109,7 +109,7 @@ Base64 Decode 後，拿到 [index.php](web3/index.php) 原始碼，
 
 查詢到這個 [SQL Injection Bypassing WAF](https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF)
 
-果然，url encode 可以逃離 waf 的限制，因此，
+試著利用 url encode 可以逃離 waf 的限制，因此，
 
 `https://final.ais3.org:10380/?p=php://filter/convert.base64-encode/resource=fl%61g`
 
