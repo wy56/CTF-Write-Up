@@ -16,7 +16,9 @@ Hint: Throw ball to the Pokemon
 
 解密 `uudecode misc1.txt`，
 
-得到 gzip 的壓縮檔 [misc1/quiz]
+得到一個沒副檔名的檔案 [misc1/quiz]，
+
+用 `file quiz` 得知是一個 gzip 的壓縮檔案，
 
 解壓縮後 `tar xvf quiz`，得到一個文件 [tmp](misc1/tmp)
 
@@ -40,7 +42,7 @@ The flag is `ais3{~Black_n_White_vi5ual_crYPtoGraPhY~}`
 
 ## web-1
 
-打開 `https://final.ais3.org:10280`
+連接 `https://final.ais3.org:10280`
 
 看到一個管理員的登入介面，
 
@@ -60,19 +62,22 @@ The flag is `ais3{~Black_n_White_vi5ual_crYPtoGraPhY~}`
 
 ![password](web1/img/img_web1_4.png)
 
-我們用這組密碼拿去登入，Flag 出現拉～
+我們用這組密碼拿去登入，進去後 Flag 出現拉～
 
-![web_flag(web1/img/img_web1_5.png)
+![web_flag](web1/img/img_web1_5.png)
 
 The flag is `ais{Cl1ent_sId3_check1ng_1s_s0_dangerous!}`
  
-
-
-
 ## web-2
+
+連結 `https://final.ais3.org:10280`
+
 
 ## web-3
 
+連接 `https://final.ais3.org:10380`
+
+這次又是跟 Pre-exam 一樣是個 Snoopy File Service，
 ## 心得
 
 去年參加 AIS3 2015 就對資安產生興趣，
