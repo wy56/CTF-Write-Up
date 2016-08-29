@@ -22,9 +22,9 @@ Hint: Throw ball to the Pokemon
 
 裡面有 有一個寶貝球 & 傑尼龜 
 
-![pub_ball](misc1/tmp/pub_ball.png]
+![pub_ball](misc1/tmp/pub_ball.png)
 
-![bub_mon](misc1/tmp/pub_mon.png]
+![bub_mon](misc1/tmp/pub_mon.png)
 
 根據提示可能需要把這兩張圖片 overlay，
 
