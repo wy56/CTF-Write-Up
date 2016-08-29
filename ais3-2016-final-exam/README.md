@@ -79,7 +79,7 @@ The flag is `ais{Cl1ent_sId3_check1ng_1s_s0_dangerous!}`
 
 這次又是跟 Pre-exam 一樣是個 Snoopy Flag Service，(出題者到底有多愛 Snoopy)
 
-![snoopy_service](web3/img/img_web3_1)
+![snoopy_service](web3/img/img_web3_1.png)
 
 試著尋找是否有 LFI 的漏洞，試了很久卻一無所獲，
 
@@ -89,7 +89,7 @@ The flag is `ais{Cl1ent_sId3_check1ng_1s_s0_dangerous!}`
 
 皇天不負苦心人，終於拿到 index 的 base64 拉～
 
-![source_index](web3/img/img_web3_2)
+![source_index](web3/img/img_web3_2.png)
 
 Base64 Decode 後，拿到 [index.php](web3/index.php) 原始碼，
 
@@ -99,11 +99,11 @@ Base64 Decode 後，拿到 [index.php](web3/index.php) 原始碼，
 
 果不其然，這題沒那麼簡單被 waf 濾掉了，又看到了該死的甘道夫，
 
-![source_index](web3/img/img_web3_3)
+![source_index](web3/img/img_web3_3.png)
 
 我們再利用 [index.php](web3/index.php) 原始碼獲得了一些線索，
 
-![source_index](web3/img/img_web3_4)
+![source_index](web3/img/img_web3_4.png)
 
 查詢到這個 [SQL Injection Bypassing WAF](https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF)
 
@@ -113,11 +113,11 @@ Base64 Decode 後，拿到 [index.php](web3/index.php) 原始碼，
 
 哈哈，拿到原始碼拉～
 
-![source_flag](web3/img/img_web3_5)
+![source_flag](web3/img/img_web3_5.png)
 
 打開來看， Flag 果然躺在這裡 Q_Q
 
-![source_flag](web3/img/img_web3_6)
+![source_flag](web3/img/img_web3_6.png)
 
 The flag is `ais3{Sn00py_1s_so_cuT3!!!but_there_1s_a_Fxcking_WAF!}`
 
