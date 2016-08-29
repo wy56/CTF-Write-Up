@@ -8,9 +8,41 @@ Date: 2016.08.28
 
 Hint: Throw ball to the Pokemon
 
-Open [misc1.txt](misc1/misc1.txt)
+打開 [misc1.txt](misc1/misc1.txt)
 
+會發現是一長串加密的文件，根據開頭 `begin 644` 餵 Google 後，
 
+可以知道它是 `uuencode` 加密文件，
+
+解密 `uudecode misc1.txt`，
+
+得到 gzip 的壓縮檔 [misc1/quiz]
+
+解壓縮後 `tar xvf quiz`，得到一個文件 [tmp](misc1/tmp)
+
+裡面有 有一個寶貝球 & 傑尼龜 
+
+![pub_ball](misc1/tmp/pub_ball.png]
+
+![bub_mon](misc1/tmp/pub_mon.png]
+
+根據提示可能需要把這兩張圖片 overlay，
+
+後來找到這個網站 [imgonline](http://www.imgonline.com.ua/eng/impose-picture-on-another-picture.php)
+
+得到 ![answer](misc1/img/answer.jpg)
+
+The flag is `ais3{~Black_n_White_vi5ual_crYPtoGraPhY~}`
+
+## misc-2
+
+## misc+crypto-1
+
+## web-1
+
+## web-2
+
+## web-3
 
 ## 心得
 
@@ -38,5 +70,4 @@ Open [misc1.txt](misc1/misc1.txt)
 
 期許明年有能力解 Binary、Pwn 之類的題目，Cheer Up!!!
 
-以下是我今年的 Write-up （如有問題歡迎來信）
-
+2016「金盾獎」見拉！！ 
