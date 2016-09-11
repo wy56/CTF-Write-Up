@@ -8,7 +8,7 @@ Scoreboard: 343 points (#53)
 
 ![scoreboard_weiyu](scoreboard_weiyu.png)
 
-#＃ 心得
+##  心得
 
 這次加入 Bamboofox 的討論群組，挑戰這次的 2016 ASIS CTF 比賽，
 
