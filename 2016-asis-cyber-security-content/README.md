@@ -1,6 +1,6 @@
 ## 2016 ASIS Cyber Security Content
 
-Author: zxc41329 <at> gmail.com
+Author: WeiYu < zxc41329 [at] gmail.com >
 
 Date: 2016.09.11
 
