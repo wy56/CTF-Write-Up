@@ -4,7 +4,7 @@ Author: zxc41329 <at> gmail.com
 
 Date: 2016.09.11
 
-Scoreboard: #53
+Scoreboard: 343 points (#53)
 
 ![scoreboard_weiyu](scoreboard_weiyu.png)
 
