@@ -12,5 +12,5 @@ Decode 後拿到 flag
 
 ![img_CTF101_3](img/img_CTF101_3.png)
 
-The flag is `ASIS(31a483900b8576426cccdf55402b9dd6)`
+The flag is `ASIS{31a483900b8576426cccdf55402b9dd6}`
 

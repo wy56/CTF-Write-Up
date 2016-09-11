@@ -10,5 +10,5 @@
 
 ![img_SmallestMD5_2](img/img_SmallestMD5_2.png)
 
-The flag is `ASIS(08ni(g0u3ada_JiyongYoun-HLETRD)`
+The flag is `ASIS{08ni(g0u3ada_JiyongYoun-HLETRD}`
 
