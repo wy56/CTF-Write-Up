@@ -6,7 +6,7 @@ Date: 2016.09.11
 
 Scoreboard: #53
 
-[scoreboard_weiyu](scoreboard_weiyu.png)
+![scoreboard_weiyu](scoreboard_weiyu.png)
 
 #＃ 心得
 

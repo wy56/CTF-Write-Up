@@ -2,7 +2,7 @@
 
 ## Description
 
-![img_description](img/img_TheImitationGame_1.png)
+![img_description](img/img_TheImitationGame.png)
 
 題目給了一個 [FILE](The_Imitation_Game.txz)
 
