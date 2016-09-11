@@ -1,6 +1,6 @@
 # Smallest MD5
 
-### Description
+## Description
 
 ![img_SmallestMD5_1](img/img_SmallestMD5_1.png)
 
