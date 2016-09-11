@@ -14,7 +14,7 @@
 
 ![img_SkyBlue_2](img/img_SkyBlue_2.png)
 
-使用 [NetworkMiner](http://www.netresec.com/?page=NetworkMiner) 得到圖片
+提取封包後，獲得有 flag 內容的圖片
 
 ![img_SkyBlue_3](img/img_SkyBlue_3.png)
 
