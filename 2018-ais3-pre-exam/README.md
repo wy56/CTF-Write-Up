@@ -4,9 +4,9 @@ Author: WeiYu < zxc41329 [at] gmail.com >
 
 Date: 2018.06.02
 
-- 這一次沒太多時間打 CTF，就變成玩一玩 Web 題目~
+`這一次沒太多時間打 CTF，就變成玩一玩 Web 題目`
 
-![Rank](/rank.png)
+![Rank](rank.png)
 
 ## Web 1 
     warm up web challenge.
